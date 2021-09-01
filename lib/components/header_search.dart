@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../consts.dart';
+import 'package:plant/consts.dart';
 
 class HeaderWithSearch extends StatelessWidget {
-  const HeaderWithSearch({Key? key, required this.size}) : super(key: key);
-
-  final Size size;
+  const HeaderWithSearch({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
     return Container(
       margin: EdgeInsets.only(bottom: kDefaultPadding * 1.5),
       height: size.height * 0.2,

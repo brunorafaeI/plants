@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../consts.dart';
+import 'package:plant/consts.dart';
 
 class TitleWithButtonMore extends StatelessWidget {
   const TitleWithButtonMore({
@@ -15,7 +15,8 @@ class TitleWithButtonMore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+      margin: EdgeInsets.only(top: kDefaultPadding / 2),
+      padding: EdgeInsets.symmetric(horizontal: kDefaultPadding * 1.2),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

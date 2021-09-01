@@ -1,11 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:plant/screens/details/detail.dart';
+import 'package:plant/consts.dart';
 
-import '../consts.dart';
+class PlantData {
+  const PlantData({
+    required this.title,
+    required this.country,
+    required this.price,
+    this.image = '',
+  });
+
+  final String title, country, image;
+  final int price;
+}
 
 class PlantCard extends StatelessWidget {
   const PlantCard({Key? key, required this.plantData}) : super(key: key);
 
-  final Map plantData;
+  final Map<String, dynamic> plantData;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +41,12 @@ class PlantCard extends StatelessWidget {
       ),
       child: GestureDetector(
         onTap: () {
-          print("I'm tapped!");
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => DetailScreen(),
+            ),
+          );
         },
         child: Column(
           children: [
@@ -44,16 +61,16 @@ class PlantCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      plantData['title'].toUpperCase(),
+                      plantData['title'],
                       style: TextStyle(
                         color: Colors.grey[800],
                         fontWeight: FontWeight.w500,
                       ),
                     ),
                     Text(
-                      plantData['country'].toUpperCase(),
+                      plantData['country'],
                       style: TextStyle(
-                        color: kPrimaryColor.withOpacity(0.5),
+                        color: kPrimaryColor.withOpacity(0.6),
                       ),
                     )
                   ],

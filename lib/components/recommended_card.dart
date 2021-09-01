@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:plant/components/plant_card.dart';
 
 class RecommendedSection extends StatelessWidget {
@@ -25,7 +26,7 @@ class RecommendPlantCard extends StatelessWidget {
     },
     {
       'title': 'Angelica',
-      'country': 'Russia',
+      'country': 'Japan',
       'price': '440',
       'image': 'assets/images/image_2.png'
     },
